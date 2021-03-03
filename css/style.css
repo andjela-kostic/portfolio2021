@@ -1,0 +1,146 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header {
+  background-color: #0a0a0c;
+  width: 20vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+}
+
+header #AKfigure img {
+  width: 60%;
+  border-radius: 50%;
+  border: 3px solid purple;
+  margin: 1vw auto;
+}
+
+header #AKime {
+  padding: 2vw 0vw;
+  font-size: 2vw;
+}
+
+header #AKzanimanje {
+  font-size: 1.5vw;
+}
+
+header #AKime, header #AKfigure, header #AKzanimanje {
+  text-align: center;
+}
+
+header nav ul {
+  padding: 4vw 0vw;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 1.5vw;
+  display: table;
+  margin: 0 auto;
+  padding: 1.5vw;
+}
+
+.container {
+  width: 80vw;
+  margin-left: 20vw;
+  background-image: url("../img/bgy.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container #aboutMe {
+  position: relative;
+  height: 60vw;
+  width: 60vw;
+  padding-top: 10vw;
+  margin-left: 10vw;
+}
+
+.container #aboutMe article {
+  position: absolute;
+  z-index: 3;
+  width: 50%;
+  top: 15%;
+  left: 6%;
+}
+
+.container #aboutMe article h3 {
+  font-size: 3vw;
+  margin-bottom: 2vw;
+}
+
+.container #aboutMe article p {
+  background-color: #0a0a0c;
+  color: white;
+  padding: 3vw;
+  font-size: 1.5vw;
+  -webkit-animation: mymove 5s infinite;
+          animation: mymove 5s infinite;
+}
+
+.container #aboutMe figure {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  opacity: 0.8;
+}
+
+@-webkit-keyframes mymove {
+  50% {
+    -webkit-box-shadow: 20px 20px 50px 15px gray;
+            box-shadow: 20px 20px 50px 15px gray;
+  }
+}
+
+@keyframes mymove {
+  50% {
+    -webkit-box-shadow: 20px 20px 50px 15px gray;
+            box-shadow: 20px 20px 50px 15px gray;
+  }
+}
+
+.container #hi {
+  width: 100%;
+  height: 90vh;
+  background-image: url("../img/aklap.jpg");
+  background-size: cover;
+}
+
+.container #hi article {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: black;
+  filter: alpha(opacity=80);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+  opacity: 0.8;
+}
+
+.container #hi article h1 {
+  position: absolute;
+  top: 35vh;
+  left: 5vw;
+  font-size: 5vw;
+  color: gray;
+}
+/*# sourceMappingURL=style.css.map */
