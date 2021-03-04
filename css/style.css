@@ -1,6 +1,7 @@
 * {
   margin: 0%;
   padding: 0%;
+  font-family: 'Domine', serif;
 }
 
 body {
@@ -16,28 +17,58 @@ body {
           justify-content: flex-start;
 }
 
+a {
+  text-decoration: none;
+}
+
+.line {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#0a0a0c), to(#a8bcbd));
+  background: linear-gradient(to right, #0a0a0c, #a8bcbd);
+}
+
+.line h3 {
+  padding: 30px 30px 30px 30px;
+  font-size: 2.5em;
+  color: #9545a0;
+}
+
 header {
   background-color: #0a0a0c;
   width: 20vw;
   height: 100vh;
+  -webkit-box-shadow: 0px 0px 10px #9545a0;
+          box-shadow: 0px 0px 10px #9545a0;
   position: fixed;
   z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header #AKfigure img {
   width: 60%;
   border-radius: 50%;
-  border: 3px solid purple;
+  border: 3px solid #9545a0;
   margin: 1vw auto;
 }
 
 header #AKime {
   padding: 2vw 0vw;
   font-size: 2vw;
+  color: #9545a0;
 }
 
 header #AKzanimanje {
   font-size: 1.5vw;
+  color: #9545a0;
 }
 
 header #AKime, header #AKfigure, header #AKzanimanje {
@@ -45,7 +76,8 @@ header #AKime, header #AKfigure, header #AKzanimanje {
 }
 
 header nav ul {
-  padding: 4vw 0vw;
+  margin-top: 1.5vw;
+  margin-bottom: 1.5vw;
 }
 
 header nav ul li {
@@ -53,75 +85,24 @@ header nav ul li {
 }
 
 header nav ul li a {
-  text-decoration: none;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   display: table;
   margin: 0 auto;
   padding: 1.5vw;
+  color: #a8bcbd;
 }
 
 .container {
   width: 80vw;
   margin-left: 20vw;
-  background-image: url("../img/bgy.jpg");
+  background-image: url("../img/squared.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
 
-.container #aboutMe {
-  position: relative;
-  height: 60vw;
-  width: 60vw;
-  padding-top: 10vw;
-  margin-left: 10vw;
-}
-
-.container #aboutMe article {
-  position: absolute;
-  z-index: 3;
-  width: 50%;
-  top: 15%;
-  left: 6%;
-}
-
-.container #aboutMe article h3 {
-  font-size: 3vw;
-  margin-bottom: 2vw;
-}
-
-.container #aboutMe article p {
-  background-color: #0a0a0c;
-  color: white;
-  padding: 3vw;
-  font-size: 1.5vw;
-  -webkit-animation: mymove 5s infinite;
-          animation: mymove 5s infinite;
-}
-
-.container #aboutMe figure {
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  opacity: 0.8;
-}
-
-@-webkit-keyframes mymove {
-  50% {
-    -webkit-box-shadow: 20px 20px 50px 15px gray;
-            box-shadow: 20px 20px 50px 15px gray;
-  }
-}
-
-@keyframes mymove {
-  50% {
-    -webkit-box-shadow: 20px 20px 50px 15px gray;
-            box-shadow: 20px 20px 50px 15px gray;
-  }
-}
-
 .container #hi {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url("../img/aklap.jpg");
   background-size: cover;
 }
@@ -138,9 +119,230 @@ header nav ul li a {
 
 .container #hi article h1 {
   position: absolute;
-  top: 35vh;
-  left: 5vw;
+  top: 45vh;
+  left: 4vw;
   font-size: 5vw;
   color: gray;
+  font-family: 'Rosario', sans-serif;
+}
+
+.container #aboutMe {
+  position: relative;
+  height: 38vw;
+  width: 60vw;
+  padding-top: 10vw;
+  margin-left: 10vw;
+}
+
+.container #aboutMe article {
+  position: absolute;
+  z-index: 3;
+  width: 50%;
+  top: 15%;
+  left: 6%;
+}
+
+.container #aboutMe article h3 {
+  font-size: 3vw;
+  margin-bottom: 2vw;
+  border-bottom: 3px solid #9545a0;
+  width: 60%;
+}
+
+.container #aboutMe article p {
+  background-color: #0a0a0c;
+  color: #a8bcbd;
+  padding: 3vw;
+  font-size: 1.5vw;
+  border-top: 3px solid #9545a0;
+  border-right: 3px solid #9545a0;
+}
+
+.container #aboutMe article p:hover {
+  border-top: 3px solid #9545a0;
+  border-right: 3px solid #9545a0;
+  -webkit-box-shadow: 0px 0px 15px 0px gray;
+          box-shadow: 0px 0px 15px 0px gray;
+}
+
+.container #aboutMe figure {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+}
+
+.container #aboutMe figure:hover {
+  z-index: 3;
+}
+
+.container #aboutMe figure:hover img {
+  -webkit-box-shadow: 0px 0px 15px 0px gray;
+          box-shadow: 0px 0px 15px 0px gray;
+  border-left: 3px solid #9545a0;
+  border-bottom: 3px solid #9545a0;
+}
+
+.container #skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 7vw;
+}
+
+.container #skills figure {
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 5px 5px #a8bcbd;
+          box-shadow: 0px 5px 5px 5px #a8bcbd;
+}
+
+.container #skills figure figcaption {
+  padding: 1vw;
+  text-align: center;
+  font-weight: bold;
+}
+
+.container #projects {
+  padding: 7vw;
+}
+
+.container #projects .red {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container #projects .red .project {
+  position: relative;
+  margin: 2vw;
+}
+
+.container #projects .red .project img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4%;
+  -webkit-box-shadow: 0px 0px 5px 0px gray;
+          box-shadow: 0px 0px 5px 0px gray;
+}
+
+.container #projects .red .project .aboutProject {
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  filter: alpha(opacity=80);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+  opacity: 0.8;
+  padding: 3.5vw;
+  display: none;
+  color: white;
+  text-align: center;
+  border-radius: 4%;
+}
+
+.container #projects .red .project .aboutProject article p {
+  margin-bottom: 3vw;
+}
+
+.container #projects .red .project .aboutProject article span {
+  padding: 0.5vw;
+  border: 3px solid #9545a0;
+  color: white;
+}
+
+.container #projects .red .project .aboutProject article span:hover {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.container #projects .red .project:hover .aboutProject {
+  display: block;
+}
+
+.container #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 7vw;
+}
+
+.container #contact form input, .container #contact form textarea, .container #contact form #posalji {
+  width: 25vw;
+  margin: 1vw;
+  padding: 0.7vw;
+  border: 1px solid #9545a0;
+  border-radius: 4%;
+}
+
+.container #contact form #posalji {
+  background-color: #9545a0;
+  margin-left: 1.5vw;
+  width: 10vw;
+}
+
+.container #contact form #posalji i {
+  font-size: 1.5vw;
+}
+
+.container #linkovi {
+  font-size: 3vw;
+  text-align: center;
+  margin-bottom: 3vw;
+}
+
+.container #linkovi a {
+  margin: 1vw;
+}
+
+.container footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #0a0a0c;
+  text-align: center;
+  padding: 1.5vw;
+}
+
+.container footer p {
+  color: #a8bcbd;
+}
+
+.container footer p span {
+  color: #9545a0;
+}
+
+.container footer #putanje {
+  font-size: 2vw;
 }
 /*# sourceMappingURL=style.css.map */

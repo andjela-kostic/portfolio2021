@@ -1,49 +1,91 @@
 *{
     margin: 0%;
     padding: 0%;
+    font-family: 'Domine', serif;
 }
 
+$bojaKosulje:rgb(168,188,189);
+$ljubicasta:rgb(149,69,160);
+$skoroCrna:rgb(10,10,12);
+$crna:black;
+$ljubicastborder:3px solid $ljubicasta;
+@mixin opacity($opacity: 0.5) {
+    filter: alpha(opacity=$opacity*100);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opacity*100});
+    opacity: $opacity;
+}
+@mixin fleksrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@mixin flekscolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@mixin rastojanje{
+    @include fleksrow;
+    padding: 7vw;
+}
 body{    
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+}
+a{
+    text-decoration: none;
+}
+.line{
+    width: 100%;   
+    background: linear-gradient(to right,$skoroCrna,$bojaKosulje);
+    h3{
+        padding:30px 30px 30px 30px;
+        font-size: 2.5em;
+        color: $ljubicasta;
+    }
 }
 
 header{
     background-color: rgb(10,10,12);
     width: 20vw;
     height: 100vh;
+    box-shadow: 0px 0px 10px $ljubicasta;
     position: fixed;
     z-index: 999;
+    @include flekscolumn;
     #AKfigure{
         img{
             width: 60%;
             border-radius: 50%;
-            border:3px solid purple;
+            border:$ljubicastborder;
             margin: 1vw auto;
         }
     }
     #AKime{
         padding: 2vw 0vw;
         font-size: 2vw;
+        color: $ljubicasta;
     }
     #AKzanimanje{        
         font-size: 1.5vw;
+        color: $ljubicasta;
     }
     #AKime,#AKfigure,#AKzanimanje{
         text-align: center;
     }
     nav{   
         ul{
-            padding: 4vw 0vw;
+            margin-top:1.5vw;
+            margin-bottom: 1.5vw;
             li{
                 list-style-type: none;               
                 a{
-                    text-decoration: none;
-                    font-size: 1.5vw;
+                    font-size: 1.2vw;
                     display:table;
                     margin:0 auto;
                     padding: 1.5vw;
+                    color: $bojaKosulje;
                 }
             }
         }
@@ -51,14 +93,35 @@ header{
 }
 
 .container{
+    #hi{
+        width: 100%;
+        height: 100vh;
+        background-image: url('../img/aklap.jpg');
+        background-size: cover;
+        article{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color:$crna;
+            @include opacity(0.80);
+            h1{
+                position: absolute;
+                top:45vh;
+                left:4vw;
+                font-size: 5vw;
+                color:gray;
+                font-family: 'Rosario', sans-serif;
+            }
+        }
+    }
     width: 80vw;
     margin-left: 20vw;
-    background-image: url('../img/bgy.jpg');
+    background-image: url('../img/squared.jpg');
     background-size: cover;
     background-attachment: fixed;        
     #aboutMe{
         position: relative;
-        height: 60vw;
+        height: 38vw;
         width: 60vw;
         padding-top: 10vw;
         margin-left: 10vw;
@@ -66,58 +129,154 @@ header{
             position: absolute;
             z-index:3;
             width: 50%;
-           top: 15%;
-           left: 6%;
+            top: 15%;
+            left: 6%;   
            h3{
                font-size: 3vw;
                margin-bottom: 2vw;
+               border-bottom:$ljubicastborder;
+               width: 60%;
            }
            p{        
-            background-color: rgb(10,10,12);
-            color: white; 
+            background-color: $skoroCrna;
+            color: $bojaKosulje; 
             padding: 3vw;     
             font-size: 1.5vw;
-            animation: mymove 5s infinite;
+            border-top: $ljubicastborder;
+            border-right: $ljubicastborder;
+            &:hover{
+                border-top:$ljubicastborder;
+                border-right: $ljubicastborder;
+                box-shadow: 0px 0px 15px 0px gray;
+            }
          }
         }
         figure{
             position: absolute;
             z-index: 2;
-            right: 0;
-            opacity: 0.8;
-        }
-    }
-    @keyframes mymove {
-        50% {box-shadow: 20px 20px 50px 15px gray;}
-    }
-    
-    @mixin opacity($opacity: 0.5) {
-        filter: alpha(opacity=$opacity*100);
-        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opacity*100});
-        opacity: $opacity;
-      }
-      $primari:rgb(0,0,0);
-      #hi{
-        width: 100%;
-        height: 90vh;
-        background-image: url('../img/aklap.jpg');
-        background-size: cover;
-      
-        article{
-            width: 100%;
-            height: 100%;
-            position: relative;
-            background-color:$primari;
-            @include opacity(0.80);
-                h1{
-                    position: absolute;
-                    top:35vh;
-                    left:5vw;
-                    font-size: 5vw;
-                    color:gray;
+            right:0;
+            &:hover{
+                z-index: 3;
+                img{
+                
+                box-shadow: 0px 0px 15px 0px gray;
+                border-left: $ljubicastborder;
+                border-bottom: $ljubicastborder;
                 }
             }
-        } 
+        }
+    }
+    #skills{
+        @include rastojanje;
+        figure{
+            background-color:white;
+            box-shadow: 0px 5px 5px 5px $bojaKosulje;
+            figcaption{
+                padding: 1vw;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+     
+    }
+    #projects{
+        padding:7vw;
+        .red{
+            @include fleksrow;       
+        .project{
+            position: relative;
+            margin: 2vw;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 4%;
+                box-shadow: 0px 0px 5px 0px gray;
+            }
+            .aboutProject{
+                height: auto;
+                position:absolute;
+                top:0;
+                left:0;
+                right: 0;
+                bottom: 0;
+                background-color: $crna;
+                @include opacity(0.80);
+                padding: 3.5vw;
+                display: none;
+                color: white;
+                text-align: center;
+                border-radius: 4%;
+                article{
+                    p{
+                        margin-bottom: 3vw;
+                    }
+                    span{
+                        padding: 0.5vw;
+                        border:$ljubicastborder;
+                        color: white;
+                        &:hover{
+                            background-color: white;
+                            color:$crna;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .aboutProject{
+                display: block;
+                }
+            }
+        }
+    }
+    }
+    #contact{
+        @include rastojanje;
+            form{
+                input,textarea,#posalji{
+                    width: 25vw;
+                    margin: 1vw;
+                    padding: 0.7vw;
+                    border: 1px solid $ljubicasta;
+                    border-radius: 4%;
+                }
+                #posalji{
+                    background-color: $ljubicasta;
+                    margin-left:1.5vw;
+                    width: 10vw;
+                    i{
+                        font-size: 1.5vw;
+                    }
+                }
+                
+        }
+        
+    }
+    #linkovi{
+        font-size: 3vw;
+        text-align: center;
+        margin-bottom: 3vw;
+        a{
+            margin:1vw;
+        }
+    }
+    footer{
+        @include fleksrow;
+        background-color: $skoroCrna;
+        text-align: center;
+        padding:1.5vw;
+        p{
+            color: $bojaKosulje;
+            span{
+                color: $ljubicasta;
+            }
+        }
+        #putanje{
+            font-size: 2vw;
+        }
+    }
+
 }
 
 
