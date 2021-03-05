@@ -2,19 +2,12 @@
   margin: 0%;
   padding: 0%;
   font-family: 'Domine', serif;
+  scroll-behavior: smooth;
 }
 
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -28,12 +21,12 @@ a {
 }
 
 .line h3 {
-  padding: 30px 30px 30px 30px;
+  padding: 0.7em;
   font-size: 2.5em;
   color: #9545a0;
 }
 
-header {
+menu {
   background-color: #0a0a0c;
   width: 20vw;
   height: 100vh;
@@ -48,43 +41,42 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-header #AKfigure img {
+menu #AKfigure img {
   width: 60%;
   border-radius: 50%;
   border: 3px solid #9545a0;
   margin: 1vw auto;
 }
 
-header #AKime {
+menu #AKime {
   padding: 2vw 0vw;
   font-size: 2vw;
   color: #9545a0;
 }
 
-header #AKzanimanje {
+menu #AKzanimanje {
   font-size: 1.5vw;
   color: #9545a0;
 }
 
-header #AKime, header #AKfigure, header #AKzanimanje {
+menu #AKime, menu #AKfigure, menu #AKzanimanje {
   text-align: center;
 }
 
-header nav ul {
+menu nav ul {
   margin-top: 1.5vw;
   margin-bottom: 1.5vw;
 }
 
-header nav ul li {
+menu nav ul li {
   list-style-type: none;
 }
 
-header nav ul li a {
+menu nav ul li a {
   font-size: 1.2vw;
   display: table;
   margin: 0 auto;
@@ -100,14 +92,14 @@ header nav ul li a {
   background-attachment: fixed;
 }
 
-.container #hi {
+.container header {
   width: 100%;
   height: 100vh;
   background-image: url("../img/aklap.jpg");
   background-size: cover;
 }
 
-.container #hi article {
+.container header article {
   width: 100%;
   height: 100%;
   position: relative;
@@ -117,21 +109,23 @@ header nav ul li a {
   opacity: 0.8;
 }
 
-.container #hi article h1 {
+.container header article h1 {
   position: absolute;
   top: 45vh;
   left: 4vw;
   font-size: 5vw;
-  color: gray;
+  background: -webkit-linear-gradient(#9545a0, #a8bcbd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: 'Rosario', sans-serif;
 }
 
 .container #aboutMe {
   position: relative;
-  height: 38vw;
+  height: 50vw;
   width: 60vw;
-  padding-top: 10vw;
-  margin-left: 10vw;
+  padding: 10vw;
+  margin: 0px auto;
 }
 
 .container #aboutMe article {
@@ -161,8 +155,8 @@ header nav ul li a {
 .container #aboutMe article p:hover {
   border-top: 3px solid #9545a0;
   border-right: 3px solid #9545a0;
-  -webkit-box-shadow: 0px 0px 15px 0px gray;
-          box-shadow: 0px 0px 15px 0px gray;
+  -webkit-box-shadow: 0px 0px 15px 0px #a8bcbd;
+          box-shadow: 0px 0px 15px 0px #a8bcbd;
 }
 
 .container #aboutMe figure {
@@ -171,13 +165,19 @@ header nav ul li a {
   right: 0;
 }
 
+.container #aboutMe figure img {
+  width: 100%;
+  max-width: 30vw;
+  height: auto;
+}
+
 .container #aboutMe figure:hover {
   z-index: 3;
 }
 
 .container #aboutMe figure:hover img {
-  -webkit-box-shadow: 0px 0px 15px 0px gray;
-          box-shadow: 0px 0px 15px 0px gray;
+  -webkit-box-shadow: 0px 0px 15px 0px #a8bcbd;
+          box-shadow: 0px 0px 15px 0px #a8bcbd;
   border-left: 3px solid #9545a0;
   border-bottom: 3px solid #9545a0;
 }
@@ -190,19 +190,39 @@ header nav ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 7vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10%;
 }
 
-.container #skills figure {
+.container #skills .zaPrelom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+}
+
+.container #skills .zaPrelom figure {
   background-color: white;
   -webkit-box-shadow: 0px 5px 5px 5px #a8bcbd;
           box-shadow: 0px 5px 5px 5px #a8bcbd;
 }
 
-.container #skills figure figcaption {
+.container #skills .zaPrelom figure img {
+  max-width: 10vw;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.container #skills .zaPrelom figure figcaption {
+  font-size: 1.2vw;
   padding: 1vw;
   text-align: center;
   font-weight: bold;
@@ -220,19 +240,20 @@ header nav ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .container #projects .red .project {
   position: relative;
   margin: 2vw;
+  width: 45em;
+  height: auto;
 }
 
 .container #projects .red .project img {
   width: 100%;
-  height: 100%;
+  height: auto;
   border-radius: 4%;
   -webkit-box-shadow: 0px 0px 5px 0px gray;
           box-shadow: 0px 0px 5px 0px gray;
@@ -249,7 +270,7 @@ header nav ul li a {
   filter: alpha(opacity=80);
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
   opacity: 0.8;
-  padding: 3.5vw;
+  padding: 3vw;
   display: none;
   color: white;
   text-align: center;
@@ -284,10 +305,9 @@ header nav ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 7vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10%;
 }
 
 .container #contact form input, .container #contact form textarea, .container #contact form #posalji {
@@ -308,6 +328,11 @@ header nav ul li a {
   font-size: 1.5vw;
 }
 
+.container #contact article iframe {
+  width: 22em;
+  height: 20em;
+}
+
 .container #linkovi {
   font-size: 3vw;
   text-align: center;
@@ -326,23 +351,24 @@ header nav ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: #0a0a0c;
-  text-align: center;
   padding: 1.5vw;
 }
 
 .container footer p {
   color: #a8bcbd;
+  margin-top: 0.5vw;
+  float: left;
 }
 
 .container footer p span {
   color: #9545a0;
 }
 
-.container footer #putanje {
+.container footer #putanje i {
   font-size: 2vw;
+  margin-left: 2vw;
 }
 /*# sourceMappingURL=style.css.map */

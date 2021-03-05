@@ -2,13 +2,22 @@
     margin: 0%;
     padding: 0%;
     font-family: 'Domine', serif;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after{
+-webkit-box-sizing: border-box;
+-moz-box-sizing:border-box;
+box-sizing: border-box;
 }
 
 $bojaKosulje:rgb(168,188,189);
 $ljubicasta:rgb(149,69,160);
 $skoroCrna:rgb(10,10,12);
 $crna:black;
+$bela:white;
 $ljubicastborder:3px solid $ljubicasta;
+
 @mixin opacity($opacity: 0.5) {
     filter: alpha(opacity=$opacity*100);
     filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opacity*100});
@@ -17,21 +26,19 @@ $ljubicastborder:3px solid $ljubicasta;
 @mixin fleksrow{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 @mixin flekscolumn {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 @mixin rastojanje{
     @include fleksrow;
-    padding: 7vw;
+    padding: 10%;
 }
-body{    
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+@mixin tekst-center{
+    text-align:center;
 }
 a{
     text-decoration: none;
@@ -40,13 +47,13 @@ a{
     width: 100%;   
     background: linear-gradient(to right,$skoroCrna,$bojaKosulje);
     h3{
-        padding:30px 30px 30px 30px;
+        padding:0.7em;
         font-size: 2.5em;
         color: $ljubicasta;
     }
 }
 
-header{
+menu{
     background-color: rgb(10,10,12);
     width: 20vw;
     height: 100vh;
@@ -72,7 +79,7 @@ header{
         color: $ljubicasta;
     }
     #AKime,#AKfigure,#AKzanimanje{
-        text-align: center;
+        @include tekst-center;
     }
     nav{   
         ul{
@@ -93,7 +100,7 @@ header{
 }
 
 .container{
-    #hi{
+    header{
         width: 100%;
         height: 100vh;
         background-image: url('../img/aklap.jpg');
@@ -109,7 +116,9 @@ header{
                 top:45vh;
                 left:4vw;
                 font-size: 5vw;
-                color:gray;
+                background: -webkit-linear-gradient($ljubicasta,$bojaKosulje);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
                 font-family: 'Rosario', sans-serif;
             }
         }
@@ -121,10 +130,10 @@ header{
     background-attachment: fixed;        
     #aboutMe{
         position: relative;
-        height: 38vw;
+        height: 50vw;
         width: 60vw;
-        padding-top: 10vw;
-        margin-left: 10vw;
+        padding: 10vw;
+        margin:0px auto;
         article{
             position: absolute;
             z-index:3;
@@ -144,22 +153,26 @@ header{
             font-size: 1.5vw;
             border-top: $ljubicastborder;
             border-right: $ljubicastborder;
-            &:hover{
-                border-top:$ljubicastborder;
-                border-right: $ljubicastborder;
-                box-shadow: 0px 0px 15px 0px gray;
+                &:hover{
+                    border-top:$ljubicastborder;
+                    border-right: $ljubicastborder;
+                    box-shadow: 0px 0px 15px 0px $bojaKosulje;
+                }
             }
-         }
         }
         figure{
             position: absolute;
             z-index: 2;
             right:0;
+            img{
+                width: 100%;
+                max-width:30vw;
+                height: auto;
+            }
             &:hover{
                 z-index: 3;
-                img{
-                
-                box-shadow: 0px 0px 15px 0px gray;
+                img{               
+                box-shadow: 0px 0px 15px 0px $bojaKosulje;
                 border-left: $ljubicastborder;
                 border-bottom: $ljubicastborder;
                 }
@@ -168,16 +181,27 @@ header{
     }
     #skills{
         @include rastojanje;
-        figure{
-            background-color:white;
-            box-shadow: 0px 5px 5px 5px $bojaKosulje;
-            figcaption{
-                padding: 1vw;
-                text-align: center;
-                font-weight: bold;
+        .zaPrelom{
+            @include fleksrow;
+            width: 50%;
+            figure{
+                background-color:$bela;
+                box-shadow: 0px 5px 5px 5px $bojaKosulje;
+                img{
+                    max-width: 10vw;
+                    width: 100%;
+                    height: auto;
+                    margin: auto;
+                }
+                figcaption{
+                    font-size: 1.2vw;
+                    padding: 1vw;
+                    @include tekst-center;
+                    font-weight: bold;
+                }
             }
+         
         }
-     
     }
     #projects{
         padding:7vw;
@@ -186,10 +210,11 @@ header{
         .project{
             position: relative;
             margin: 2vw;
-            
+            width: 45em;
+            height: auto;            
             img{
                 width: 100%;
-                height: 100%;
+                height: auto;
                 border-radius: 4%;
                 box-shadow: 0px 0px 5px 0px gray;
             }
@@ -202,10 +227,10 @@ header{
                 bottom: 0;
                 background-color: $crna;
                 @include opacity(0.80);
-                padding: 3.5vw;
+                padding: 3vw;
                 display: none;
-                color: white;
-                text-align: center;
+                color: $bela;;
+                @include tekst-center;
                 border-radius: 4%;
                 article{
                     p{
@@ -214,9 +239,9 @@ header{
                     span{
                         padding: 0.5vw;
                         border:$ljubicastborder;
-                        color: white;
+                        color: $bela;;
                         &:hover{
-                            background-color: white;
+                            background-color: $bela;;
                             color:$crna;
                             font-weight: bold;
                         }
@@ -233,29 +258,35 @@ header{
     }
     #contact{
         @include rastojanje;
-            form{
-                input,textarea,#posalji{
-                    width: 25vw;
-                    margin: 1vw;
-                    padding: 0.7vw;
-                    border: 1px solid $ljubicasta;
-                    border-radius: 4%;
+        form{
+            input,textarea,#posalji{
+                width: 25vw;
+                margin: 1vw;
+                padding: 0.7vw;
+                border: 1px solid $ljubicasta;
+                border-radius: 4%;
+            }
+            #posalji{
+                background-color: $ljubicasta;
+                margin-left:1.5vw;
+                width: 10vw;
+                i{
+                    font-size: 1.5vw;
                 }
-                #posalji{
-                    background-color: $ljubicasta;
-                    margin-left:1.5vw;
-                    width: 10vw;
-                    i{
-                        font-size: 1.5vw;
-                    }
-                }
+            }
                 
+        }
+        article{
+            iframe{
+                width: 22em;
+                height: 20em;
+            }
         }
         
     }
     #linkovi{
         font-size: 3vw;
-        text-align: center;
+        @include tekst-center;
         margin-bottom: 3vw;
         a{
             margin:1vw;
@@ -264,19 +295,20 @@ header{
     footer{
         @include fleksrow;
         background-color: $skoroCrna;
-        text-align: center;
         padding:1.5vw;
         p{
             color: $bojaKosulje;
+            margin-top: 0.5vw;
+            float: left;
             span{
                 color: $ljubicasta;
             }
         }
-        #putanje{
+        #putanje i{
             font-size: 2vw;
+            margin-left: 2vw;
         }
     }
-
 }
 
 

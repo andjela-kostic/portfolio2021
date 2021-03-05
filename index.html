@@ -5,24 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anđela Kostić | Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">   
+    <link href="img/ak.jpg" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Domine&family=Rosario:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/64136a29e4.js" crossorigin="anonymous"></script>
+    <style>body>script+div[style^="text"]{display:none}html,body {overflow-x:hidden!important}</style>
 </head>
 <body>
-    <header>       
+    <menu>       
         <figure id="AKfigure">
             <img src="img/akbp.jpg" alt="Anđela Kostić, front-end developer">
         </figure>
-        <section>
-
-       
-        <h1 id="AKime">ANĐELA KOSTIĆ</h1>
-        <h2 id="AKzanimanje">FRONT-END DEVELOPER</h2>
-    </section>
+        <section>      
+            <h1 id="AKime">ANĐELA KOSTIĆ</h1>
+            <h2 id="AKzanimanje">FRONT-END DEVELOPER</h2>
+        </section>
         <nav>
             <ul>
                 <li><a href="">ABOUT ME</a></li>
@@ -31,15 +32,15 @@
                 <li><a href="">CONTACT</a></li>
             </ul>
         </nav>
-    </header>
+    </menu>
     <section class="container">
-        <section id="hi">
+        <header>
             <article>
                 <h1>Hi, <br/>I'm Anđela Kostić <br/>Web developer</h1>
             </article>
-        </section>
+        </header>
         <article class="line">
-            <h3>SKILLS</h3>
+            <h3>ABOUT ME</h3>
         </article>  
             <section id="aboutMe">                             
                 <article data-aos="fade-right">
@@ -56,27 +57,25 @@
             <h3>SKILLS</h3>
         </article>
             <section id="skills">
+                <article class="zaPrelom">
                     <figure class="iconCard" data-aos="fade-up">
                         <img src="img/html (2).png" alt="html"/>
                         <figcaption classs="captioncard">HTML</figcaption>
                     </figure>               
-
-
                     <figure class="iconCard" data-aos="fade-down">
                         <img src="img/css.png" alt="css"/>
                         <figcaption classs="captioncard">
                             CSS
                         </figcaption>
                     </figure>               
-
-
                     <figure class="iconCard" data-aos="fade-up">
                         <img src="img/js.png" alt="javascript"/>
                         <figcaption classs="captioncard">
                             JAVASCRIPT
                         </figcaption>
                     </figure>               
-
+                </article>
+                <article class="zaPrelom">
                     <figure class="iconCard" data-aos="fade-down">
                         <img src="img/bootstrap.png" alt="bootstrap"/>
                         <figcaption classs="captioncard">
@@ -88,7 +87,14 @@
                         <figcaption classs="captioncard">
                             SASS
                         </figcaption>
-                    </figure>           
+                    </figure>
+                    <figure class="iconCard" data-aos="fade-up">
+                        <img src="img/sass.png" alt="sass"/>
+                        <figcaption classs="captioncard">
+                            SASS
+                        </figcaption>
+                    </figure>
+                </article>         
             </section>
             <article class="line">
                 <h3>PROJECTS</h3>
@@ -153,7 +159,9 @@
                     <textarea rows="4" cols="50" placeholder="Message"></textarea></br>
                     <button id="posalji"><i class="fa fa-send-o" aria-hidden="true"></i></button>
                 </form>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.358671714421!2d20.482226114712628!3d44.81425718459665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a9609031735%3A0xc17ed71f59ac4725!2z0JLQuNGB0L7QutCwINCY0KbQoiDRiNC60L7Qu9Cw!5e0!3m2!1ssr!2srs!4v1614895210607!5m2!1ssr!2srs" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <article>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.358671714421!2d20.482226114712628!3d44.81425718459665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a9609031735%3A0xc17ed71f59ac4725!2z0JLQuNGB0L7QutCwINCY0KbQoiDRiNC60L7Qu9Cw!5e0!3m2!1ssr!2srs!4v1614895210607!5m2!1ssr!2srs" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </article>
                 </br>
             </section>
             <article id="linkovi">
@@ -171,11 +179,14 @@
                 </section>
             </footer>
     </section>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
-           
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">           
     </script>
     <script>
          AOS.init();
+    </script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script>
+    <script src="http://css3-mediaqueriesjs.googlecode.com/svn/trunk/ css3-mediaqueries.js">
     </script>
 </body>
 </html>

@@ -1,0 +1,272 @@
+@media only screen and (max-width: 1140px) {
+  .container #skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container #skills .zaPrelom {
+    margin: 2vw;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container #contact article iframe {
+    width: 20em;
+    height: 20em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body menu {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  body menu nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body menu nav ul li a {
+    font-size: 1.7vw;
+  }
+  body menu #AKfigure img {
+    width: 15VW;
+    height: auto;
+  }
+  body .container {
+    width: 100vw;
+    margin: 0;
+  }
+  body .container header {
+    height: 60vh;
+  }
+  body .container header article h1 {
+    top: 20%;
+  }
+  body .container article h1 {
+    font-size: 7vw;
+  }
+  body .container #aboutMe {
+    margin-bottom: 5vw;
+    width: 65vw;
+  }
+  body .container #aboutMe article p {
+    font-size: 1.8vw;
+  }
+  body .container #aboutMe figure img {
+    max-width: 35vw;
+  }
+  body .container .iconCard img {
+    max-width: 20vw !important;
+  }
+  body .container #contact form input, body .container #contact form textarea, body .container #contact form #posalji {
+    width: 35vw;
+    padding: 1vw;
+  }
+  body .container #contact form #posalji {
+    width: 15vw;
+  }
+  body .container #contact form #posalji i {
+    font-size: 2vw;
+  }
+  body .container footer p {
+    font-size: 1.7vw;
+  }
+  body .container footer #putanje {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body menu figure, body menu section {
+    display: none;
+  }
+  body menu nav ul li a {
+    font-size: 2.5vw;
+  }
+  body .container .line {
+    font-size: 2vw;
+  }
+  body .container #aboutMe {
+    width: 75vw !important;
+  }
+  body .container #aboutMe article p {
+    font-size: 2.2vw !important;
+  }
+  body .container #skills .zaPrelom figcaption {
+    font-size: 2vw !important;
+  }
+  body .container #projects .red {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container #projects .red .project {
+    width: 60vw;
+    margin: 2vw auto;
+  }
+  body .container #contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .container #contact form {
+    margin: 4vw auto;
+  }
+  body .container #contact form input, body .container #contact form textarea, body .container #contact form #posalji {
+    width: 60vw;
+    padding: 2vw;
+  }
+  body .container #contact form #posalji i {
+    font-size: 4vw;
+  }
+  body .container #contact article iframe {
+    width: 60vw;
+    margin-left: 10vw;
+    margin-top: 10vw;
+  }
+  body .container #linkovi {
+    font-size: 7vw;
+  }
+  body .container footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  body .container footer p {
+    font-size: 3vw;
+  }
+  body .container footer #putanje i {
+    font-size: 4vw;
+    margin: 2vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  body menu nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body menu nav ul li a {
+    font-size: 4vw;
+    margin: 1vw auto;
+  }
+  body .container header {
+    height: 40vh;
+  }
+  body .container #aboutMe {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100vw;
+    height: auto;
+    margin: 10vw auto;
+    padding: 0;
+  }
+  body .container #aboutMe article {
+    position: static;
+    width: 100%;
+  }
+  body .container #aboutMe article h3 {
+    font-size: 6vw;
+  }
+  body .container #aboutMe article p {
+    font-size: 5vw !important;
+  }
+  body .container #aboutMe figure {
+    position: static;
+  }
+  body .container #aboutMe figure img {
+    max-width: 100%;
+    margin-top: 15vw;
+  }
+  body .container #skills .zaPrelom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body .container #skills .zaPrelom figure {
+    width: 60%;
+    margin: 3vw auto;
+  }
+  body .container #skills .zaPrelom figure img {
+    max-width: 70vw !important;
+    width: 100%;
+    height: auto;
+  }
+  body .container #skills .zaPrelom figure figcaption {
+    font-size: 5vw !important;
+  }
+  body .container #projects .red .project {
+    margin: 5vw auto;
+    width: 100%;
+  }
+  body .container #projects .red .project .aboutProject {
+    padding: 10vw;
+    font-size: 4.5vw;
+  }
+  body .container #contact form input, body .container #contact form textarea, body .container #contact form #posalji {
+    width: 80vw;
+    padding: 3vw;
+  }
+  body .container #contact article iframe {
+    width: 70vw;
+    margin-left: 5vw;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
