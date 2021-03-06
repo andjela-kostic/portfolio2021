@@ -216,6 +216,9 @@
             header{
                 height:40vh;
             }
+            .line{
+                font-size: 3.5vw;
+            }
             #aboutMe{
                 position: static;
                 display: flex;
@@ -286,6 +289,14 @@
                     }
                 }
             }
+            footer{
+                p{
+                    font-size: 3.5vw;
+                }
+                #putanje i{
+                    font-size:6vw;
+                }
+            } 
         }
     }
 }

@@ -207,54 +207,54 @@ menu{
         padding:7vw;
         .red{
             @include fleksrow;       
-        .project{
-            position: relative;
-            margin: 2vw;
-            width: 45em;
-            height: auto;            
-            img{
-                width: 100%;
-                height: auto;
-                border-radius: 4%;
-                box-shadow: 0px 0px 5px 0px gray;
-            }
-            .aboutProject{
-                height: auto;
-                position:absolute;
-                top:0;
-                left:0;
-                right: 0;
-                bottom: 0;
-                background-color: $crna;
-                @include opacity(0.80);
-                padding: 3vw;
-                display: none;
-                color: $bela;;
-                @include tekst-center;
-                border-radius: 4%;
-                article{
-                    p{
-                        margin-bottom: 3vw;
-                    }
-                    span{
-                        padding: 0.5vw;
-                        border:$ljubicastborder;
-                        color: $bela;;
-                        &:hover{
-                            background-color: $bela;;
-                            color:$crna;
-                            font-weight: bold;
+            .project{
+                position: relative;
+                margin: 2vw;
+                width: 45em;
+                height: auto;            
+                img{
+                    width: 100%;
+                    height: auto;
+                    border-radius: 4%;
+                    box-shadow: 0px 0px 5px 0px gray;
+                }
+                .aboutProject{
+                    height: auto;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: $crna;
+                    @include opacity(0.80);
+                    padding: 3vw;
+                    display: none;
+                    color: $bela;;
+                    @include tekst-center;
+                    border-radius: 4%;
+                    article{
+                        p{
+                            margin-bottom: 3vw;
+                        }
+                        span{
+                            padding: 0.5vw;
+                            border:$ljubicastborder;
+                            color: $bela;;
+                            &:hover{
+                                background-color: $bela;;
+                                color:$crna;
+                                font-weight: bold;
+                            }
                         }
                     }
                 }
-            }
-            &:hover{
-                .aboutProject{
-                display: block;
+                &:hover{
+                    .aboutProject{
+                    display: block;
+                    }
                 }
             }
         }
-    }
     }
     #contact{
         @include rastojanje;
@@ -273,16 +273,14 @@ menu{
                 i{
                     font-size: 1.5vw;
                 }
-            }
-                
+            }                
         }
         article{
             iframe{
                 width: 22em;
                 height: 20em;
             }
-        }
-        
+        }        
     }
     #linkovi{
         font-size: 3vw;
