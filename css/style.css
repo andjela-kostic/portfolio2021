@@ -84,6 +84,10 @@ menu nav ul li a {
   color: #a8bcbd;
 }
 
+menu nav ul li a:hover {
+  color: #9545a0;
+}
+
 .container {
   width: 80vw;
   margin-left: 20vw;
@@ -367,8 +371,9 @@ menu nav ul li a {
   color: #9545a0;
 }
 
-.container footer #putanje i {
+.container footer #putanje a i {
   font-size: 2vw;
   margin-left: 2vw;
+  color: #9545a0;
 }
 /*# sourceMappingURL=style.css.map */

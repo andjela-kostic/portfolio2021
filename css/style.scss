@@ -93,6 +93,9 @@ menu{
                     margin:0 auto;
                     padding: 1.5vw;
                     color: $bojaKosulje;
+                    &:hover{
+                        color:$ljubicasta;
+                    }
                 }
             }
         }
@@ -302,7 +305,7 @@ menu{
                 color: $ljubicasta;
             }
         }
-        #putanje i{
+        #putanje a i{
             font-size: 2vw;
             margin-left: 2vw;
             color:$ljubicasta;
